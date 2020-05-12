@@ -1,26 +1,53 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import React from "react";
+// import "./App.css";
+// import CounterContext from "components/Counter";
+// import Child from "components/Child";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// function App() {
+// 	return (
+// 		<div className="App">
+// 			<p>hello app</p>
+// 			<CounterContext />
+// 			<Child />
+// 		</div>
+// 	);
+// }
+
+// export default App;
+
+// import React from "react";
+// import CounterContext from "components/Counter";
+// import Child from "components/Child";
+
+// const App = () => {
+// 	return (
+// 		<CounterContext.Provider value={{ name1: "Matthieu", name2: "Mathis" }}>
+// 			<p>hello app</p>
+// 			<Child />
+// 		</CounterContext.Provider>
+// 	);
+// };
+
+// export default App;
+
+//import React from "react";
+import TotoContext from "components/Toto";
+import React from "react";
+// import React, { createContext } from "react";
+
+import Child from "components/Child";
+
+const App = () => {
+	// const TotoContext = createContext({ name1: "Matthieu", name2: "Mathis" });
+
+	return (
+		<div>
+			<TotoContext.Provider value={{ name1: "Matthieu", name2: "Mathis" }}>
+				{" "}
+				<Child />
+			</TotoContext.Provider>
+		</div>
+	);
+};
 
 export default App;
